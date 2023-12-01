@@ -8,5 +8,3 @@ sed -i "s/six/6x/g" $file
 sed -i "s/seven/7n/g" $file
 sed -i "s/eight/8t/g" $file
 sed -i "s/nine/9e/g" $file
-make
-#./part2
