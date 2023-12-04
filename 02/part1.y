@@ -20,7 +20,6 @@ static void yyerror(current_line_t *__ret, const char *s)
 }
 
 %define parse.error verbose
-%glr-parser
 %parse-param {current_line_t *line}
 
 %left WHITESPACE NUMBER RED BLUE GREEN COLON SEMI_COLON COMMA GAME
