@@ -25,13 +25,11 @@ func (in *InputArray) ScanNumber(x, y int) (int, int) {
 	startIndex := x
 	for startIndex >= 0 {
 		if in.Data[y][startIndex] < '0' || in.Data[y][startIndex] > '9' {
-			// Overscanned by one
-			startIndex++
 			break
 		}
 		startIndex--
 	}
-	startIndex = max(0, startIndex)
+	startIndex++
 
 	number := 0
 	for x3 := startIndex; x3 < len(in.Data[y]); x3++ {
@@ -122,6 +120,7 @@ func (in *InputArray) Solve() uint64 {
 			}
 			if letter < '0' || letter > '9' || x == len(ySlice)-1 {
 				if currentNumber != Nan {
+					// where end of line is a single digit number this fails
 					total += in.HandleNumber(x-1, y)
 				}
 				currentNumber = Nan

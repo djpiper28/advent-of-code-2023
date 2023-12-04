@@ -22,6 +22,7 @@ func (in *InputArray) IsValidNumber(inX, inY int) bool {
 				for x2 := max(0, currX-1); x2 <= min(currX+1, len(in.Data[y2])-1); x2++ {
 					if in.Data[y2][x2] != nonSymbol && (in.Data[y2][x2] < '0' || in.Data[y2][x2] > '9') {
 						valid = true
+            break
 					}
 				}
 			}
