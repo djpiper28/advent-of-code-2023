@@ -1,0 +1,6 @@
+*.out
+part2
+*.tab.*
+*.gch
+*.yy.*
+*.output
